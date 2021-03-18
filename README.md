@@ -1,5 +1,5 @@
-Please click this link to see the actual Google Colab: colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU#scrollTo=vHnLcI-WZuWW.
-Or if you want to see the research paper, click on this: github.com/slampham/10x-Dev/blob/main/Final_Report.pdf.
+Please click this link to see the actual Google Colab: https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU#scrollTo=M-Ye5MoYGDzl
+Or if you want to see the research paper, click on this: https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf
 
 # Project Description
 This research project I did with my professor had to be one of my most favorite projects I've ever worked on. We did research to find what differentiates an elite developer (or 10x developer) from an average developer, such as their habits and coding styles.
