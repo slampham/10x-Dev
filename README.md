@@ -1,5 +1,5 @@
 Please click this link to see the actual Google Colab: <br/>
-https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU#scrollTo=M-Ye5MoYGDzl <br/>
+https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU?usp=sharing#scrollTo=1vQ5t2NvXspL <br/>
 <br/>
 Or if you want to see the research paper, click on this: https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf
 
