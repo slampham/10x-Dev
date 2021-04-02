@@ -8,6 +8,12 @@ import Footer from './Footer'
 
 const StyledApp = styled.div`
   min-height: 100vh;
+  padding: 0 var(--margin);
+
+  ${({sideMenuOpen}) => sideMenuOpen && `
+    transform: translate(200px);
+  `}
+  transition: transform var(--trans-time) ease-in-out;
 `
 
 function App() {

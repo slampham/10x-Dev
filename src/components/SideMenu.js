@@ -8,13 +8,10 @@ const StyledMenu = styled.nav`
 
   position: fixed;
   top: 0;  
-  right: max(-66vw, -200px);
-  left: 100vw;
+  right: 100vw;
   bottom: 0;
+  left: -200px;
 
-  ${({sideMenuOpen}) => sideMenuOpen && `
-    transform: translate(max(-66vw, -200px));
-  `}
   transition: var(--trans-time) ease-in-out;
 
   hr, li {
