@@ -1,8 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 
-function SideMenu() {
+const StyledMenu = styled.nav`
+  background-color: #1E89F8;
+
+  position: fixed;
+  top: 0;  
+  right: 0;
+  left: 33vw;
+  bottom: 0;
+
+  ${({sideMenuOpen}) => !sideMenuOpen && `
+    transform: translate(77vw);
+  `}
+
+  transition: var(--trans-time) ease-in-out;
+`
+
+function SideMenu({sideMenuOpen}) {
   return (
-    <nav>
+    <StyledMenu {...{sideMenuOpen}}>
       <i/> <h3>10x Dev</h3>
 
       <br/>
@@ -18,7 +35,7 @@ function SideMenu() {
         <i/> <li></li>
         <i/> <li></li>
       </ul>
-    </nav>
+    </StyledMenu>
   )
 }
 

@@ -1,5 +1,6 @@
 :root {
-  --margin: 25px;
+  --margin: 15px;
+  --trans-time: .3s;
 }
 
 *, *:before, *:after {
