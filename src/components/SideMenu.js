@@ -8,12 +8,12 @@ const StyledMenu = styled.nav`
 
   position: fixed;
   top: 0;  
-  right: -66vw;
+  right: max(-66vw, -200px);
   left: 100vw;
   bottom: 0;
 
   ${({sideMenuOpen}) => sideMenuOpen && `
-    transform: translate(-66vw);
+    transform: translate(max(-66vw, -200px));
   `}
   transition: var(--trans-time) ease-in-out;
 
@@ -31,14 +31,12 @@ const StyledMenu = styled.nav`
   }
 
   hr {
-    width: 80%;
+    width: 100%;
   }
 
   a {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: white;
 
     .icon {
       font-size: 1.25rem;

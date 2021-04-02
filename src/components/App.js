@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import SideMenu from './SideMenu'
 import Header from './Header'
 import Dashboard from './Dashboard'
+import Footer from './Footer'
 
 const StyledApp = styled.div`
   min-height: 100vh;
-  margin-top: 50px;
 `
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <Header {...{sideMenuOpen, setSideMenuOpen}}/>
       <SideMenu {...{sideMenuOpen}}/>
       <Dashboard {...{sideMenuOpen}}/>
+      <Footer />
     </StyledApp>
   );
 }

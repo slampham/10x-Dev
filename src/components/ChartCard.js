@@ -14,6 +14,10 @@ const StyledChartCard = styled(StyledCard)`
     font-weight: 200;
     color: white;
   }
+
+  .chart-container {
+    height: 225px;
+  }
 `
 
 function ChartCard({title, subtitle, children}) {
@@ -21,7 +25,7 @@ function ChartCard({title, subtitle, children}) {
     <StyledChartCard >
       <h3 className='title'>{title}</h3>
       {subtitle}
-      <div >
+      <div className='chart-container'>
         {children}
       </div>
     </StyledChartCard>
