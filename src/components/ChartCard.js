@@ -1,29 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Line, Bar } from 'react-chartjs-2'
+import { StyledCard } from './Card'
 
-const StyledCard = styled.div`
-  background-color: #27293D;
-  border-radius: 5px;
-  padding: 0 10px;
-
-  > * {
-    margin: 10px 0;
+const StyledChartCard = styled(StyledCard)`
+  .title {
+    font-size: 12px;
+    font-weight: 300;
+    color: #9A9A9A;
   }
-`
 
-const ChartContainer = styled.div`
+  .subtitle {
+    font-size: 23px;
+    font-weight: 200;
+    color: white;
+  }
+
+  .chart-container {
+    height: 225px;
+  }
 `
 
 function ChartCard({title, subtitle, children}) {
   return (
-    <StyledCard className='Chart'>
+    <StyledChartCard >
       <h3 className='title'>{title}</h3>
       {subtitle}
-      <ChartContainer>
+      <div className='chart-container'>
         {children}
-      </ChartContainer>
-    </StyledCard>
+      </div>
+    </StyledChartCard>
   )
 }
 
