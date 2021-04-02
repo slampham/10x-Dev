@@ -4,10 +4,6 @@ import { StyledChartCard } from './ChartCard'
 
 const StyledLargeCard = styled(StyledChartCard)`
   .title-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     button {
       font-family: Poppins;
       font-size: 12px;
@@ -15,8 +11,20 @@ const StyledLargeCard = styled(StyledChartCard)`
       color: ${({active}) => active ? 'white' : '#1D8CF8'};
       background: ${({active}) => active ? '#1D8CF8' : 'none'};
       border-color: #1D8CF8;
-      padding: .2em 1em;
+      padding: .1em .5em;
       border-radius: 3px;
+    }
+  }
+
+  @media (min-width: 425px) {
+    .title-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: .2em 1em;
     }
   }
 `
