@@ -14,6 +14,9 @@ const StyledApp = styled.div`
     transform: translate(200px);
   `}
   transition: transform var(--trans-time) ease-in-out;
+
+  @media (min-width: 1000px) {
+  }
 `
 
 function App() {

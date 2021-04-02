@@ -14,12 +14,16 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: center;
 
-  color: white;
   background: rgb(30, 30, 46);
 
   ${StyledButton} {
     position: absolute;
     left: var(--margin);
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
   }
 `
 

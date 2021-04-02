@@ -8,9 +8,9 @@ const StyledMenu = styled.nav`
 
   position: fixed;
   top: 0;  
-  right: 100vw;
   bottom: 0;
   left: -200px;
+  min-width: 200px;
 
   transition: var(--trans-time) ease-in-out;
 
