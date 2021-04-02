@@ -5,6 +5,7 @@ import { FaReact } from 'react-icons/fa'
 const StyledMenu = styled.nav`
   background-color: #1E89F8;
   padding: 1.5em;
+  min-width: 200px;
 
   transition: var(--trans-time) ease-in-out;
 
@@ -45,13 +46,13 @@ const StyledMenu = styled.nav`
     top: 0;  
     bottom: 0;
     left: -200px;
-    min-width: 200px;
   }
 
   @media (min-width: 1000px) {
+    height: 92%;
     width: 250px;
     border-radius: 5px;
-    margin-right: calc(1.5 * var(--margin));
+    margin-left: var(--margin);
   }
 `
 

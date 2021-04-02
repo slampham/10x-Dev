@@ -3,12 +3,8 @@ import styled from 'styled-components'
 import MenuToggler, { StyledButton } from './MenuToggler.js'
 
 const StyledHeader = styled.header`
-  position: sticky;
-  height: 50px;
   padding: 20px var(--margin);
-  left: 0;
-  right: 0;
-  top: 0;
+  height: 50px;
   
   display: flex;
   align-items: center;
@@ -24,6 +20,16 @@ const StyledHeader = styled.header`
   h3 {
     font-size: 16px;
     font-weight: 300;
+  }
+
+  @media (max-width: 999px) {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  @media (min-width: 1000px) {
   }
 `
 

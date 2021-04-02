@@ -10,9 +10,11 @@ const StyledDashboard = styled.div`
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 40px;
-  overflow: hidden;  //FIXME: not sure if needed
+  /* overflow: hidden;  //FIXME: not sure if needed */
 
   @media (min-width: 1000px) {
+    margin: calc(3.5 * var(--margin)) calc(2 * var(--margin));
+
     grid-template: repeat(3, 300px) / repeat(6, 1fr);
 
     .chart1 {
