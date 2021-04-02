@@ -6,19 +6,13 @@ const StyledMenu = styled.nav`
   background-color: #1E89F8;
   padding: 1.5em;
 
-  position: fixed;
-  top: 0;  
-  bottom: 0;
-  left: -200px;
-  min-width: 200px;
-
   transition: var(--trans-time) ease-in-out;
 
   hr, li {
     margin-top: 1.5em;
   }
 
-  .sidemenu-title {
+  .Menu-title {
     display: flex;
 
     span {
@@ -45,12 +39,26 @@ const StyledMenu = styled.nav`
       font-weight: 300;
     }
   }
+
+  @media (max-width: 999px) {
+    position: fixed;
+    top: 0;  
+    bottom: 0;
+    left: -200px;
+    min-width: 200px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 250px;
+    border-radius: 5px;
+    margin-right: calc(1.5 * var(--margin));
+  }
 `
 
-function SideMenu({sideMenuOpen}) {
+function Menu({MenuOpen}) {
   return (
-    <StyledMenu {...{sideMenuOpen}}>
-      <h3 className='sidemenu-title'><FaReact /> <span>10X DEV</span></h3>
+    <StyledMenu {...{MenuOpen}} className='menu'>
+      <h3 className='Menu-title'><FaReact /> <span>10X DEV</span></h3>
 
       <hr/>
 
@@ -69,4 +77,4 @@ function SideMenu({sideMenuOpen}) {
   )
 }
 
-export default SideMenu
+export default Menu

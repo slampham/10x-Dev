@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SideMenuToggler, { StyledButton } from './SideMenuToggler.js'
+import MenuToggler, { StyledButton } from './MenuToggler.js'
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -27,10 +27,10 @@ const StyledHeader = styled.header`
   }
 `
 
-function Header({sideMenuOpen, setSideMenuOpen}) {
+function Header({MenuOpen, setMenuOpen}) {
   return (
     <StyledHeader>
-      <SideMenuToggler {...{sideMenuOpen, setSideMenuOpen}} />
+      <MenuToggler {...{MenuOpen, setMenuOpen}} />
       <h3>DASHBOARD</h3>
     </StyledHeader>
   )
