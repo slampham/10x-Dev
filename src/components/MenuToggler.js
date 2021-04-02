@@ -26,7 +26,7 @@ const StyledButton = styled.button`
       width: 75%;
     }
 
-    ${({ sideMenuOpen }) => sideMenuOpen && `
+    ${({ MenuOpen }) => MenuOpen && `
       &:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 3px);
       }
@@ -40,11 +40,15 @@ const StyledButton = styled.button`
       }
     `}
   }
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `
 
-function SideMenuToggler({sideMenuOpen, setSideMenuOpen}) {
+function MenuToggler({MenuOpen, setMenuOpen}) {
   return (
-    <StyledButton onClick={() => setSideMenuOpen(state => !state)} {...{sideMenuOpen}}>
+    <StyledButton onClick={() => setMenuOpen(state => !state)} {...{MenuOpen}}>
       <div />
       <div />
       <div />
@@ -53,4 +57,4 @@ function SideMenuToggler({sideMenuOpen, setSideMenuOpen}) {
 }
 
 export { StyledButton }
-export default SideMenuToggler
+export default MenuToggler

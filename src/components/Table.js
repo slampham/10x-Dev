@@ -35,9 +35,9 @@ const StyledTable = styled(StyledCard)`
   }
 `
 
-function Table() {
+function Table({className}) {
   return (
-    <StyledTable>
+    <StyledTable {...{className}}>
       <h3>Simple Table</h3>
 
       <table>
