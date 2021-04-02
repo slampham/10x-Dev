@@ -17,7 +17,7 @@ function App() {
     <StyledApp {...{sideMenuOpen}}>
       <Header {...{sideMenuOpen, setSideMenuOpen}}/>
       <SideMenu {...{sideMenuOpen}}/>
-      <Dashboard/>
+      <Dashboard {...{sideMenuOpen}}/>
     </StyledApp>
   );
 }

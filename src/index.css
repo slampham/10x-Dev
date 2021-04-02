@@ -1,6 +1,6 @@
 :root {
   --margin: 15px;
-  --trans-time: .3s;
+  --trans-time: .2s;
 }
 
 *, *:before, *:after {
@@ -11,7 +11,7 @@
 
 body {
   padding: var(--margin);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
