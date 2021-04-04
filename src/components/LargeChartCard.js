@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Line, Bar } from 'react-chartjs-2'
+
 import { StyledChartCard } from './ChartCard'
+import { chartExample1, chartExample2, chartExample3, chartExample4 } from './charts.js';
 
 const StyledLargeCard = styled(StyledChartCard)`
   .title-buttons {
@@ -30,17 +33,17 @@ const StyledLargeCard = styled(StyledChartCard)`
   }
 `
 
-function LargeChartCard({title, subtitle, children, className, active}) {
+function LargeChartCard({className}) {
   return (
-    <StyledLargeCard {...{className, active}}>
+    <StyledLargeCard {...{className}}>
       <div className='title-buttons'>
-        <h3 className='title'>{title}</h3>
+        <h3 className='title'>TotalShipments</h3>
         <div className='buttons'><button>Accounts</button><button>Purchases</button><button>Sessions</button></div>
       </div>
 
-      {subtitle}
+      <h4 className='subtitle'>Performance</h4>
       <div className='chart-container'>
-        {children}
+        <Line data={chartExample1['data1']} options={chartExample1.options} />
       </div>
     </StyledLargeCard>
   )
