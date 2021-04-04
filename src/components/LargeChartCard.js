@@ -11,8 +11,9 @@ const StyledLargeCard = styled(StyledChartCard)`
       color: ${({active}) => active ? 'white' : '#1D8CF8'};
       background: ${({active}) => active ? '#1D8CF8' : 'none'};
       border-color: #1D8CF8;
-      padding: .1em .5em;
       border-radius: 3px;
+
+      padding: .1em .5em;
     }
   }
 
@@ -21,10 +22,10 @@ const StyledLargeCard = styled(StyledChartCard)`
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
 
-    button {
-      padding: .2em 1em;
+      button {
+        padding: .2em 1em;
+      }
     }
   }
 `

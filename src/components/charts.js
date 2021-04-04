@@ -20,6 +20,8 @@
 // #############################
 
 // chartExample1 and chartExample2 options
+let percentiles = ['0.1%', '1%', '5%', '10%', '15%', '25%', '50%', '100%']
+
 let chart1_2_options = {
   maintainAspectRatio: false,
   legend: {
@@ -84,20 +86,7 @@ let chartExample1 = {
     gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
     return {
-      labels: [
-        "JAN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC",
-      ],
+      labels: percentiles,
       datasets: [
         {
           label: "My First dataset",
@@ -114,7 +103,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
+          data: [670320, 478047, 349511, 221892, 255519, 240113, 109073, 65729],
         },
       ],
     };

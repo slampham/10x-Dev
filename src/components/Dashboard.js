@@ -9,13 +9,13 @@ import { chartExample1, chartExample2, chartExample3, chartExample4 } from './ch
 const StyledDashboard = styled.div`
   display: grid;
   grid-template-columns: 100%;
-  grid-gap: 40px;
+  grid-gap: 30px;
   /* overflow: hidden;  //FIXME: not sure if needed */
 
   @media (min-width: 1000px) {
     margin: calc(3.5 * var(--margin)) calc(2 * var(--margin));
 
-    grid-template: repeat(3, 300px) / repeat(6, 1fr);
+    grid-template: repeat(7, 300px) / repeat(6, 1fr);
 
     .chart1 {
       grid-area: 1 / 1 / 2 / -1;
