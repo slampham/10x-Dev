@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Line, Bar } from 'react-chartjs-2'
 
 import { StyledCard } from './Card'
-import { chartExample2, chartExample3, chartExample4, blueChart, pinkChart, greenChart } from './charts.js';
+import { blueChart, pinkChart, greenChart } from './charts.js';
 
 const StyledChartCard = styled(StyledCard)`
   display: flex;
@@ -27,19 +27,19 @@ const StyledChartCard = styled(StyledCard)`
   }
 `
 
-function ChartCard({title='Commits', factsMetric='factCounts', occurence, className}) {
+function ChartCard({title, factMetric, occurence, className}) {
   let chart;
 
   if ((occurence - 1) % 3 === 0) {
-    const { data, options } = blueChart(title, factsMetric)
+    const { data, options } = blueChart(title, factMetric)
     chart = <Line {...{data, options}} />
   }
   else if ((occurence - 1) % 3 === 1) {
-    const { data, options } = pinkChart(title, factsMetric)
+    const { data, options } = pinkChart(title, factMetric)
     chart = <Bar {...{data, options}} />
   }
   else {
-    const { data, options } = greenChart(title, factsMetric)
+    const { data, options } = greenChart(title, factMetric)
     chart = <Line {...{data, options}} />
   }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Line, Bar } from 'react-chartjs-2'
 import LargeChartCard from './LargeChartCard'
@@ -36,24 +36,26 @@ const StyledDashboard = styled.div`
 `
 
 function Dashboard() {
+  const [factMetric, setFactMetric] = useState('count')
+
   return (
     <StyledDashboard>
-      <LargeChartCard title='medianStarCounts' className='large-chart-card' />
+      <LargeChartCard title='medianStarCounts' className='large-chart-card' {...{factMetric, setFactMetric}} />
 
-      <ChartCard title='Commits' occurence={2} />
-      <ChartCard title='Commit Comments' occurence={3} />
-      <ChartCard title='Followers' occurence={4} />
-      <ChartCard title='Following' occurence={5} />
-      <ChartCard title='Issue Comments' occurence={6} />
-      <ChartCard title='Issue Events' occurence={7} />
-      <ChartCard title='Issues Reported' occurence={8} />
-      <ChartCard title='Issues Assigned' occurence={9} />
-      <ChartCard title='Organization Membership' occurence={10} />
-      <ChartCard title='Project Membership' occurence={11} />
-      <ChartCard title='Projects Owned' occurence={12} />
-      <ChartCard title='Pull Request Comments' occurence={13} />
-      <ChartCard title='Pull Request History' occurence={14} />
-      <ChartCard title='Projects Starred' occurence={15} />
+      <ChartCard title='Commits' occurence={2} {...{factMetric}} />
+      <ChartCard title='Commit Comments' occurence={3} {...{factMetric}} />
+      <ChartCard title='Followers' occurence={4} {...{factMetric}} />
+      <ChartCard title='Following' occurence={5} {...{factMetric}} />
+      <ChartCard title='Issue Comments' occurence={6} {...{factMetric}} />
+      <ChartCard title='Issue Events' occurence={7} {...{factMetric}} />
+      <ChartCard title='Issues Reported' occurence={8} {...{factMetric}} />
+      <ChartCard title='Issues Assigned' occurence={9} {...{factMetric}} />
+      <ChartCard title='Organization Membership' occurence={10} {...{factMetric}} />
+      <ChartCard title='Project Membership' occurence={11} {...{factMetric}} />
+      <ChartCard title='Projects Owned' occurence={12} {...{factMetric}} />
+      <ChartCard title='Pull Request Comments' occurence={13} {...{factMetric}} />
+      <ChartCard title='Pull Request History' occurence={14} {...{factMetric}} />
+      <ChartCard title='Projects Starred' occurence={15} {...{factMetric}} />
 
       <Table className='table1'/>
       <Table className='table2'/>
