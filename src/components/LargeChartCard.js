@@ -45,9 +45,21 @@ function LargeChartCard({title, className, factMetric, setFactMetric}) {
       <div className='title-buttons'>
         <h3 className='title'>{title}</h3>
         <div className='buttons'>
-          <button className={factMetric === 'count' && 'active'} onClick={() => setFactMetric('count')}>Counts</button>
-          <button className={factMetric === 'median' && 'active'} onClick={() => setFactMetric('median')}>Medians</button>
-          <button className={factMetric === 'diff' && 'active'} onClick={() => setFactMetric('diff')}>Percent Diff</button>
+          <button 
+            className={factMetric === 'count' ? 'active' : undefined}
+            onClick={() => setFactMetric('count')}>
+            Counts
+          </button>
+          <button 
+            className={factMetric === 'median' ? 'active' : undefined} 
+            onClick={() => setFactMetric('median')}>
+            Medians
+          </button>
+          <button 
+            className={factMetric === 'diff' ? 'active' : undefined} 
+            onClick={() => setFactMetric('diff')}>
+            Percent Diff
+          </button>
         </div>
       </div>
 

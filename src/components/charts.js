@@ -38,7 +38,7 @@ function blueChart(title, factMetric) {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : facts[factMetric][title],
+            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]), //FIXME: idk why we have to make copy of data. Maybe bc how chart.js manipulates data
           },
         ],
       };
@@ -96,6 +96,10 @@ function blueChart(title, factMetric) {
 }
 
 function pinkChart(title, factMetric) {
+  if (title === 'Following') {
+    console.log(facts['count']['Following'])
+  }
+
   return {
     data: (canvas) => {
       let ctx = canvas.getContext("2d");
@@ -118,7 +122,7 @@ function pinkChart(title, factMetric) {
             borderWidth: 2,
             borderDash: [],
             borderDashOffset: 0.0,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : facts[factMetric][title],
+            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]),
           },
         ],
       };
@@ -202,7 +206,7 @@ function greenChart(title, factMetric) {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : facts[factMetric][title],
+            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]),
           },
         ],
       };
@@ -258,6 +262,10 @@ function greenChart(title, factMetric) {
       },
     },
   }
+}
+
+function copy(obj) {
+  return JSON.parse(JSON.stringify(obj));
 }
 
 module.exports = {

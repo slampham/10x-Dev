@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Line, Bar } from 'react-chartjs-2'
 import LargeChartCard from './LargeChartCard'
 import ChartCard, { StyledChartCard } from './ChartCard'
 import Table from './Table'
-import { chartExample1, chartExample2, chartExample3, chartExample4 } from './charts.js';
 
 const StyledDashboard = styled.div`
   display: grid;
