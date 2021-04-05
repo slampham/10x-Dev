@@ -43,7 +43,7 @@ function LargeChartCard({title, className, factMetric, setFactMetric}) {
   return (
     <StyledLargeCard {...{className}}>
       <div className='title-buttons'>
-        <h3 className='title'>{title}</h3>
+        <h3 className='title'>Median Star Count</h3>
         <div className='buttons'>
           <button 
             className={factMetric === 'count' ? 'active' : undefined}
@@ -63,7 +63,6 @@ function LargeChartCard({title, className, factMetric, setFactMetric}) {
         </div>
       </div>
 
-      <h4 className='subtitle'>Performance</h4>
       <div className='chart-container'>
         <Line {...{data, options}} />
       </div>

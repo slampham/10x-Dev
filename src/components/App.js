@@ -27,6 +27,10 @@ const StyledApp = styled.div`
       position: sticky;
       top: 0; 
     }
+
+    .route-footer {
+      width: 100%;
+    }
   }
 `
 

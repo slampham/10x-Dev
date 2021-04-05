@@ -34,7 +34,7 @@ const StyledDashboard = styled.div`
 `
 
 function Dashboard() {
-  const [factMetric, setFactMetric] = useState('count')
+  const [factMetric, setFactMetric] = useState('median')
 
   return (
     <StyledDashboard>

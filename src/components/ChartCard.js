@@ -10,13 +10,7 @@ const StyledChartCard = styled(StyledCard)`
   flex-direction: column;
 
   .title {
-    font-size: 12px;
-    font-weight: 300;
-    color: #9A9A9A;
-  }
-
-  .subtitle {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 200;
     color: white;
   }
@@ -45,8 +39,7 @@ function ChartCard({title, factMetric, occurence, className}) {
 
   return (
     <StyledChartCard {...{className}}>
-      <h3 className='title'>{title}</h3>
-      <div className='subtitle'><i>O</i> <span>763,215</span></div>
+      <h3 className="title">{title}</h3>
       <div className='chart-container'>
         {chart}
       </div>

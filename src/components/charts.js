@@ -24,7 +24,6 @@ function blueChart(title, factMetric) {
         labels: percentiles,
         datasets: [
           {
-            label: "My First dataset",
             fill: true,
             backgroundColor: gradientStroke,
             borderColor: "#1f8ef1",
@@ -60,8 +59,7 @@ function blueChart(title, factMetric) {
       },
       responsive: true,
       scales: {
-        yAxes: [
-          {
+        yAxes: [{
             barPercentage: 1.6,
             gridLines: {
               drawBorder: false,
@@ -114,7 +112,6 @@ function pinkChart(title, factMetric) {
         labels: percentiles,
         datasets: [
           {
-            label: "Countries",
             fill: true,
             backgroundColor: gradientStroke,
             hoverBackgroundColor: gradientStroke,
@@ -152,8 +149,6 @@ function pinkChart(title, factMetric) {
               zeroLineColor: "transparent",
             },
             ticks: {
-              suggestedMin: 60,
-              suggestedMax: 120,
               padding: 20,
               fontColor: "#9e9e9e",
             },
@@ -192,7 +187,6 @@ function greenChart(title, factMetric) {
         labels: percentiles,
         datasets: [
           {
-            label: "My First dataset",
             fill: true,
             backgroundColor: gradientStroke,
             borderColor: "#00d6b4",
@@ -238,8 +232,6 @@ function greenChart(title, factMetric) {
               zeroLineColor: "transparent",
             },
             ticks: {
-              suggestedMin: 50,
-              suggestedMax: 125,
               padding: 20,
               fontColor: "#9e9e9e",
             },
