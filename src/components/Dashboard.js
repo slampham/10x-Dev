@@ -36,16 +36,24 @@ const StyledDashboard = styled.div`
 `
 
 function Dashboard() {
-  
-
   return (
     <StyledDashboard>
-      <LargeChartCard title='TotalShipments' className='large-chart-card' />
+      <LargeChartCard title='medianStarCounts' className='large-chart-card' />
 
-      <ChartCard title='TotalShipments' occurence={2} />
-      <ChartCard title='TotalShipments' occurence={3} />
-      <ChartCard title='TotalShipments' occurence={4} />
-      <ChartCard title='TotalShipments' occurence={5} />
+      <ChartCard title='Commits' occurence={2} />
+      <ChartCard title='Commit Comments' occurence={3} />
+      <ChartCard title='Followers' occurence={4} />
+      <ChartCard title='Following' occurence={5} />
+      <ChartCard title='Issue Comments' occurence={6} />
+      <ChartCard title='Issue Events' occurence={7} />
+      <ChartCard title='Issues Reported' occurence={8} />
+      <ChartCard title='Issues Assigned' occurence={9} />
+      <ChartCard title='Organization Membership' occurence={10} />
+      <ChartCard title='Project Membership' occurence={11} />
+      <ChartCard title='Projects Owned' occurence={12} />
+      <ChartCard title='Pull Request Comments' occurence={13} />
+      <ChartCard title='Pull Request History' occurence={14} />
+      <ChartCard title='Projects Starred' occurence={15} />
 
       <Table className='table1'/>
       <Table className='table2'/>

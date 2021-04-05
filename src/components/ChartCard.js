@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Line, Bar } from 'react-chartjs-2'
 
 import { StyledCard } from './Card'
-import { chartExample1, chartExample2, chartExample3, chartExample4 } from './charts.js';
+import { chartExample2, chartExample3, chartExample4, blueChart, pinkChart, greenChart } from './charts.js';
 
 const StyledChartCard = styled(StyledCard)`
   display: flex;
@@ -27,21 +27,24 @@ const StyledChartCard = styled(StyledCard)`
   }
 `
 
-function ChartCard({title, occurence, className}) {
+function ChartCard({title='Commits', factsMetric='factCounts', occurence, className}) {
   let chart;
 
   if ((occurence - 1) % 3 === 0) {
-    chart = <Line data={chartExample2.data} options={chartExample2.options} />
+    const { data, options } = blueChart(title, factsMetric)
+    chart = <Line {...{data, options}} />
   }
   else if ((occurence - 1) % 3 === 1) {
-    chart = <Bar data={chartExample3.data} options={chartExample3.options} />
+    const { data, options } = pinkChart(title, factsMetric)
+    chart = <Bar {...{data, options}} />
   }
   else {
-    chart = <Line data={chartExample4.data} options={chartExample4.options} />
+    const { data, options } = greenChart(title, factsMetric)
+    chart = <Line {...{data, options}} />
   }
 
   return (
-    <StyledChartCard className={className}>
+    <StyledChartCard {...{className}}>
       <h3 className='title'>{title}</h3>
       <div className='subtitle'><i>O</i> <span>763,215</span></div>
       <div className='chart-container'>
