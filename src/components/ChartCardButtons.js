@@ -37,7 +37,7 @@ const StyledLargeCard = styled(StyledChartCard)`
   }
 `
 
-function LargeChartCard({title, className, factMetric, setFactMetric}) {
+function ChartCardButtons({title, className, factMetric, setFactMetric}) {
   const { data, options } = blueChart('medianStarCounts')
 
   return (
@@ -45,11 +45,6 @@ function LargeChartCard({title, className, factMetric, setFactMetric}) {
       <div className='title-buttons'>
         <h3 className='title'>Median Star Count</h3>
         <div className='buttons'>
-          <button 
-            className={factMetric === 'count' ? 'active' : undefined}
-            onClick={() => setFactMetric('count')}>
-            Counts
-          </button>
           <button 
             className={factMetric === 'median' ? 'active' : undefined} 
             onClick={() => setFactMetric('median')}>
@@ -59,6 +54,11 @@ function LargeChartCard({title, className, factMetric, setFactMetric}) {
             className={factMetric === 'diff' ? 'active' : undefined} 
             onClick={() => setFactMetric('diff')}>
             Percent Diff
+          </button>
+          <button 
+            className={factMetric === 'count' ? 'active' : undefined}
+            onClick={() => setFactMetric('count')}>
+            Counts
           </button>
         </div>
       </div>
@@ -70,4 +70,4 @@ function LargeChartCard({title, className, factMetric, setFactMetric}) {
   )
 }
 
-export default LargeChartCard
+export default ChartCardButtons

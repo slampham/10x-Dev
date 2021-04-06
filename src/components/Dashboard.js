@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import LargeChartCard from './LargeChartCard'
+import ChartCardButtons from './ChartCardButtons'
 import ChartCard, { StyledChartCard } from './ChartCard'
 import Table from './Table'
 
@@ -15,7 +15,7 @@ const StyledDashboard = styled.div`
 
     grid-template: repeat(7, 300px) / repeat(6, 1fr);
 
-    .large-chart-card {
+    .chard-card-buttons {
       grid-area: 1 / 1 / 2 / -1;
     }
 
@@ -27,7 +27,7 @@ const StyledDashboard = styled.div`
       grid-area: -2 / 4 / -1 / -1;
     }
 
-    ${StyledChartCard}:not(.large-chart-card) {
+    ${StyledChartCard}:not(.chard-card-buttons) {
       grid-column: span 2;
     }
   }
@@ -38,7 +38,7 @@ function Dashboard() {
 
   return (
     <StyledDashboard>
-      <LargeChartCard title='medianStarCounts' className='large-chart-card' {...{factMetric, setFactMetric}} />
+      <ChartCardButtons title='medianStarCounts' className='chard-card-buttons' {...{factMetric, setFactMetric}} />
 
       <ChartCard title='Commits' occurence={2} {...{factMetric}} />
       <ChartCard title='Commit Comments' occurence={3} {...{factMetric}} />
