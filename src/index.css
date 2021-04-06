@@ -25,6 +25,22 @@ body {
   color: white;
 }
 
+button {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1D8CF8;
+  background: none;
+  border-color: #1D8CF8;
+  border-radius: 3px;
+  padding: .1em .5em;
+}
+
+button.active {
+  background: #1D8CF8;
+  color: white;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -32,4 +48,10 @@ code {
 
 ul {
   list-style-type: none;
+}
+
+@media (min-width: 425px) {
+  button {
+    padding: .2em 1em;
+  }
 }

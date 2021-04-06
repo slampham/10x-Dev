@@ -12,6 +12,12 @@ const StyledTable = styled(StyledCard)`
     margin-bottom: 1em;
   }
 
+  button {
+    padding: .2em;
+    margin-bottom: 1em;
+
+  }
+
   table {
     width: 100%;
 
@@ -35,12 +41,16 @@ const StyledTable = styled(StyledCard)`
   }
 `
 
-function Table({title, data, className}) {
-  const ths = data[0].map(heading => <th>{heading}</th>)
+function Table({title, data, className, buttons}) {
+  let Buttons;
+  if (buttons) {
+    Buttons = buttons.map(item => <button>{item}</button>)
+  }
 
+  const ths = data[0].map(heading => <th>{heading}</th>)
   const trs = [];
   for (const [r, row] of data.entries()) {
-    if (r != 0) {
+    if (r !== 0) {
       const tds = row.map(item => <td>{item}</td>)
       trs.push(<tr>{tds}</tr>)
     }
@@ -48,7 +58,10 @@ function Table({title, data, className}) {
 
   return (
     <StyledTable {...{className}}>
-      <h3>{title}</h3>
+      <div className='title-buttons'>
+        <h3>{title}</h3>
+        {Buttons}
+      </div>
 
       <table>
         <thead>

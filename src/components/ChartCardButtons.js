@@ -7,37 +7,13 @@ import { blueChart } from './charts.js';
 
 const StyledLargeCard = styled(StyledChartCard)`
   .title-buttons {
-    button {
-      font-family: Poppins;
-      font-size: 12px;
-      font-weight: 600;
-      color: ${({active}) => active ? 'white' : '#1D8CF8'};
-      background: ${({active}) => active ? '#1D8CF8' : 'none'};
-      border-color: #1D8CF8;
-      border-radius: 3px;
-      padding: .1em .5em;
-
-      &.active {
-        background: #1D8CF8;
-        color: white;
-      }
-    }
-  }
-
-  @media (min-width: 425px) {
-    .title-buttons {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      button {
-        padding: .2em 1em;
-      }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `
 
-function ChartCardButtons({title, className, factMetric, setFactMetric}) {
+function ChartCardButtons({className, factMetric, setFactMetric}) {
   const { data, options } = blueChart('medianStarCounts')
 
   return (
