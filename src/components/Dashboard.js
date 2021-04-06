@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ChartCardButtons from './ChartCardButtons'
 import ChartCard, { StyledChartCard } from './ChartCard'
 import Table from './Table'
+import { percentileInfo } from './data'
 
 const StyledDashboard = styled.div`
   display: grid;
@@ -55,8 +56,8 @@ function Dashboard() {
       <ChartCard title='Pull Request History' occurence={14} {...{factMetric}} />
       <ChartCard title='Projects Starred' occurence={15} {...{factMetric}} />
 
-      <Table className='table1'/>
-      <Table className='table2'/>
+      <Table title='Percentile Info' data={percentileInfo} className='table1' />
+      <Table title='Sampled Users' data={percentileInfo} className='table2' />
     </StyledDashboard>
   )
 }
