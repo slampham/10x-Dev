@@ -1,0 +1,49 @@
+import React from 'react'
+import styled from 'styled-components'
+import { Line } from 'react-chartjs-2'
+
+import { StyledChartCard } from './ChartCard'
+import { blueChart } from './charts.js';
+
+const StyledLargeCard = styled(StyledChartCard)`
+  .title-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`
+
+function ChartCardButtons({className, factMetric, setFactMetric}) {
+  const { data, options } = blueChart('medianStarCounts')
+
+  return (
+    <StyledLargeCard {...{className}}>
+      <div className='title-buttons'>
+        <h3 className='title'>Median Star Count</h3>
+        <div className='buttons'>
+          <button 
+            className={factMetric === 'median' ? 'active' : undefined} 
+            onClick={() => setFactMetric('median')}>
+            Medians
+          </button>
+          <button 
+            className={factMetric === 'diff' ? 'active' : undefined} 
+            onClick={() => setFactMetric('diff')}>
+            Percent Diff
+          </button>
+          <button 
+            className={factMetric === 'count' ? 'active' : undefined}
+            onClick={() => setFactMetric('count')}>
+            Counts
+          </button>
+        </div>
+      </div>
+
+      <div className='chart-container'>
+        <Line {...{data, options}} />
+      </div>
+    </StyledLargeCard>
+  )
+}
+
+export default ChartCardButtons

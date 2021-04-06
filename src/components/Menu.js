@@ -10,15 +10,21 @@ const StyledMenu = styled.nav`
   transition: var(--trans-time) ease-in-out;
 
   hr, li {
-    margin-top: 1.5em;
+    margin-top: 2.5em;
   }
 
-  .Menu-title {
+  .menu-title {
     display: flex;
+    align-items: center;
+
+    .icon {
+      font-size: 1.5em;
+    }
 
     span {
       margin-left: 1em;
       font-size: 14px;
+      font-weight: 400;
     }
   }
 
@@ -31,12 +37,12 @@ const StyledMenu = styled.nav`
     align-items: center;
 
     .icon {
-      font-size: 1.25rem;
+      font-size: 1.5em;
     }
 
     span {
-      margin-left: 1.5em;
-      font-size: 9px;
+      margin-left: 2em;
+      font-size: 10px;
       font-weight: 300;
     }
   }
@@ -52,14 +58,14 @@ const StyledMenu = styled.nav`
     height: 92%;
     width: 250px;
     border-radius: 5px;
-    margin-left: var(--margin);
+    margin-left: calc(1.5 * var(--margin));
   }
 `
 
 function Menu({MenuOpen}) {
   return (
     <StyledMenu {...{MenuOpen}} className='menu'>
-      <h3 className='Menu-title'><FaReact /> <span>10X DEV</span></h3>
+      <h3 className='menu-title'><FaReact className='icon'/> <span>10X DEV</span></h3>
 
       <hr/>
 

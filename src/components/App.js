@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import Menu from './Menu'
 import Header from './Header'
@@ -24,7 +25,11 @@ const StyledApp = styled.div`
     .header-menu {
       height: 100vh;
       position: sticky;
-      top: 0;
+      top: 0; 
+    }
+
+    .route-footer {
+      width: 100%;
     }
   }
 `
@@ -39,9 +44,11 @@ function App() {
         <Menu {...{MenuOpen}}/>
       </div>
 
-      <div className="dash-footer">
-        <Dashboard {...{MenuOpen}}/>
-        <Footer />
+      <div className='route-footer'>
+        <Router>
+          <Dashboard {...{MenuOpen}}/>
+          <Footer />
+        </Router>
       </div>
     </StyledApp>
   );
