@@ -1,9 +1,15 @@
 # 10x Developer
 > Analyze the differences between highly starred developers and normal developers through the number of actions they take on GitHub (such as commit amount or projects owned). Also examine the code of top developers (such as the number of comments they make or total lines of code). 
 
-Project Website: tgtest <br/>
-Google Colab: https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU?usp=sharing#scrollTo=1vQ5t2NvXspL <br/>
-Research Paper: https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf
+## Links
+
+[Project Website](https://www.spencerpham.dev/)
+
+[Google Colab](https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU?usp=sharing#scrollTo=1vQ5t2NvXspL)
+
+[Research Paper](https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf/)
+
+![Example screenshot](./example.png)
 
 ## Table of contents
 * [Screenshots](#screenshots)
@@ -12,26 +18,19 @@ Research Paper: https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf
 * [General info](#general-info)
 * [Contact](#contact)
 
-## Screenshots
-![Example screenshot](./example.png)
-
 ## Technologies
 * **Frontend**: HTML, CSS, JavaScript, React, styled-components
 * **Backend**: Python, BigQuery, GitHub API
 
 ## Code Examples
-GitHub Actions:
+[GitHub Actions:](https://ghtorrent.org/relational.html)
 
-    commits, commit_comments, followers, following, issue_comments, issue_events, issues_reporters, issues_assignees, organization_members, project_members, projects, pull_request_comments, pull_request_history, watchers
-
-    Please refer to this documentation for more understanding: https://ghtorrent.org/relational.html
+> commits, commit_comments, followers, following, issue_comments, issue_events, issues_reporters, issues_assignees, organization_members, project_members, projects, pull_request_comments, pull_request_history, watchers
 
 
-Code Metrics:
+[Code Metrics:](https://radon.readthedocs.io/en/latest/intro.html)
 
-    blank, bugs, calculated_length, comments, complexity, difficulty, effort, length, logical lines of code (lloc), lines of code (loc), multi-line strings (multi), single_comments, source lines of code (sloc), time, vocabulary, volume
-
-    Please refer to this documentation for more understanding: https://radon.readthedocs.io/en/latest/intro.html
+> blank, bugs, calculated_length, comments, complexity, difficulty, effort, length, logical lines of code (lloc), lines of code (loc), multi-line strings (multi), single_comments, source lines of code (sloc), time, vocabulary, volume
 
 
 ## General info

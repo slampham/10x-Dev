@@ -9,8 +9,6 @@ import ReadMe from './ReadMe'
 import Footer from './Footer'
 
 const StyledApp = styled.div`
-  min-height: 100vh;
-
   ${({MenuOpen}) => MenuOpen && `
     transform: translate(200px);
   `}
@@ -26,7 +24,7 @@ const StyledApp = styled.div`
     .header-menu {
       height: 100vh;
       position: sticky;
-      top: 0; 
+      top: 0;
     }
 
     .route-footer {
