@@ -1,15 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import { slowUp } from '../variants'
 
-const StyledCard = styled.div`
+const StyledCard = styled(motion.div)`
   background-color: #27293D;
   border-radius: 5px;
   padding: 10px;
 `
 
-function Card({children}) {
+function Card({children, className}) {
   return (
-    <StyledCard>
+    <StyledCard {...{className}}>
       {children}
     </StyledCard>
   )

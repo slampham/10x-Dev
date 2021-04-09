@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { FaReact } from 'react-icons/fa'
 
 const StyledMenu = styled.nav`
-  background-color: #1E89F8;
+  background: linear-gradient(#1D8CF8, #3358F4);
   padding: 1.5em;
   min-width: 200px;
 
   transition: var(--trans-time) ease-in-out;
 
   hr, li {
-    margin-top: 2.5em;
+    margin-top: 3em;
   }
 
   .menu-title {
@@ -32,7 +33,7 @@ const StyledMenu = styled.nav`
     width: 100%;
   }
 
-  a {
+  .link {
     display: flex;
     align-items: center;
 
@@ -56,7 +57,7 @@ const StyledMenu = styled.nav`
 
   @media (min-width: 1000px) {
     height: 92%;
-    width: 250px;
+    width: 200px;
     border-radius: 5px;
     margin-left: calc(1.5 * var(--margin));
   }
@@ -70,15 +71,11 @@ function Menu({MenuOpen}) {
       <hr/>
 
       <ul>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
-        <li><a href='/'><FaReact className='icon'/> <span>DASHBOARD</span></a></li>
+        <li><Link to='/' className='link'><FaReact className='icon'/> <span>DASHBOARD</span></Link></li>
+        <li><Link to='/readme' className='link'><FaReact className='icon'/> <span>README</span></Link></li>
+        <li><Link to='/code-complexity' className='link'><FaReact className='icon'/> <span>CODE COMPLEXITY</span></Link></li>
+        <li><Link to='/research-paper' className='link'><FaReact className='icon'/> <span>RESEARCH PAPER</span></Link></li>
+        <li><Link to='/google-colab' className='link'><FaReact className='icon'/> <span>GOOGLE COLAB</span></Link></li>
       </ul>
     </StyledMenu>
   )

@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Menu from './Menu'
 import Header from './Header'
 import Dashboard from './Dashboard'
+import ReadMe from './ReadMe'
 import Footer from './Footer'
 
 const StyledApp = styled.div`
@@ -39,17 +40,31 @@ function App() {
 
   return (
     <StyledApp {...{MenuOpen}}>
-      <div className='header-menu'>
-        <Header {...{MenuOpen, setMenuOpen}}/>
-        <Menu {...{MenuOpen}}/>
-      </div>
+      <Router>
+        <div className='header-menu'>
+          <Header {...{MenuOpen, setMenuOpen}}/>
+          <Menu {...{MenuOpen}}/>
+        </div>
 
-      <div className='route-footer'>
-        <Router>
-          <Dashboard {...{MenuOpen}}/>
+        <div className='route-footer'>
+          <Switch>
+            <Route exact path='/'>
+              <Dashboard {...{MenuOpen}}/>
+            </Route>
+            <Route path='/readme'>
+              <ReadMe/>
+            </Route>
+            <Route path='/code-complexity'>
+            </Route>
+            <Route path='/research-paper'>
+            </Route>
+            <Route path='/google-colab'>
+            </Route>
+          </Switch>
+
           <Footer />
-        </Router>
-      </div>
+        </div>
+      </Router>
     </StyledApp>
   );
 }

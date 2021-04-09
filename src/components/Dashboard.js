@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+
 import ChartCardButtons from './ChartCardButtons'
 import ChartCard, { StyledChartCard } from './ChartCard'
 import Table from './Table'
 import TableWithButtons from './TableWithButtons'
-import { percentileInfo, sampledUsers, percentiles } from './data'
+import { percentileInfo } from './data'
+import { stagger, slowUp } from '../variants'
 
-const StyledDashboard = styled.div`
+const StyledDashboard = styled(motion.div)`
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 30px;
@@ -39,10 +42,10 @@ function Dashboard() {
   const [factMetric, setFactMetric] = useState('median')
 
   return (
-    <StyledDashboard>
+    <StyledDashboard variants={stagger} initial='hidden' animate='show' >
       <ChartCardButtons title='medianStarCounts' className='chard-card-buttons' {...{factMetric, setFactMetric}} />
 
-      <ChartCard title='Commits' occurence={2} {...{factMetric}} />
+      <ChartCard variants={slowUp} title='Commits' occurence={2} {...{factMetric}} />
       <ChartCard title='Commit Comments' occurence={3} {...{factMetric}} />
       <ChartCard title='Followers' occurence={4} {...{factMetric}} />
       <ChartCard title='Following' occurence={5} {...{factMetric}} />

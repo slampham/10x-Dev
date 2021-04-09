@@ -5,7 +5,7 @@ import { sampledUsers, percentiles } from './data'
 
 const StyledTableWithButtons = styled(StyledTable)`
   button {
-    padding: .2em;
+    padding: .2em .36em;
     margin-bottom: 1em;
   }
 `
