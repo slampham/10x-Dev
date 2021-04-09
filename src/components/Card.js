@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { slowUp } from '../variants'
+
+import { down } from '../variants'
 
 const StyledCard = styled(motion.div)`
   background-color: #27293D;
@@ -11,7 +12,9 @@ const StyledCard = styled(motion.div)`
 
 function Card({children, className}) {
   return (
-    <StyledCard {...{className}}>
+    <StyledCard {...{className}} 
+      variants={down} whileHover={{ scale: 1.03 }} 
+    >
       {children}
     </StyledCard>
   )

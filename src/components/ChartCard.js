@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Line, Bar } from 'react-chartjs-2'
 
-import { motion } from 'framer-motion'
-import { slowUp } from '../variants'
 import Card from './Card'
 import { blueChart, pinkChart, greenChart } from './charts.js';
 

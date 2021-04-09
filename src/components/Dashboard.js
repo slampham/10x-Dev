@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -7,12 +7,13 @@ import ChartCard, { StyledChartCard } from './ChartCard'
 import Table from './Table'
 import TableWithButtons from './TableWithButtons'
 import { percentileInfo } from './data'
-import { stagger, slowUp } from '../variants'
+import { stagger } from '../variants'
 
 const StyledDashboard = styled(motion.div)`
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 30px;
+
   /* overflow: hidden;  //FIXME: not sure if needed */
 
   @media (min-width: 1000px) {
@@ -45,7 +46,7 @@ function Dashboard() {
     <StyledDashboard variants={stagger} initial='hidden' animate='show' >
       <ChartCardButtons title='medianStarCounts' className='chard-card-buttons' {...{factMetric, setFactMetric}} />
 
-      <ChartCard variants={slowUp} title='Commits' occurence={2} {...{factMetric}} />
+      <ChartCard title='Commits' occurence={2} {...{factMetric}} />
       <ChartCard title='Commit Comments' occurence={3} {...{factMetric}} />
       <ChartCard title='Followers' occurence={4} {...{factMetric}} />
       <ChartCard title='Following' occurence={5} {...{factMetric}} />

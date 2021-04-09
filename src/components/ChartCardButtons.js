@@ -17,7 +17,7 @@ function ChartCardButtons({className, factMetric, setFactMetric}) {
   const { data, options } = blueChart('medianStarCounts')
 
   return (
-    <StyledLargeCard {...{className}}>
+    <StyledLargeCard {...{className}} >
       <div className='title-buttons'>
         <h3 className='title'>Median Star Count</h3>
         <div className='buttons'>
