@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Line, Bar } from 'react-chartjs-2'
 
-import { StyledCard } from './Card'
+import { motion } from 'framer-motion'
+import { slowUp } from '../variants'
+import Card from './Card'
 import { blueChart, pinkChart, greenChart } from './charts.js';
 
-const StyledChartCard = styled(StyledCard)`
+const StyledChartCard = styled(Card)`
   display: flex;
   flex-direction: column;
 

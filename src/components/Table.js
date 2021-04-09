@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StyledCard } from './Card'
+import Card from './Card'
 
-const StyledTable = styled(StyledCard)`
+const StyledTable = styled(Card)`
   text-align: left;
   overflow: auto;
 
@@ -36,7 +36,7 @@ const StyledTable = styled(StyledCard)`
 `
 
 function Table({title, data, className}) {
-  const ths = data[0].map(heading => <th>{heading}</th>)
+  const ths = data[0].map(heading => <th key={heading}>{heading}</th>)
   const trs = [];
   for (const [r, row] of data.entries()) {
     if (r !== 0) {
