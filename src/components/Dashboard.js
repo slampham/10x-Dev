@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -14,10 +14,7 @@ const StyledDashboard = styled(motion.div)`
   grid-template-columns: 100%;
   grid-gap: 30px;
 
-  /* overflow: hidden;  //FIXME: not sure if needed */
-
   @media (min-width: 1000px) {
-    margin: calc(3.5 * var(--margin)) calc(2 * var(--margin));
 
     grid-template: repeat(7, 300px) / repeat(6, 1fr);
 

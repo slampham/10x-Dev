@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 import Menu from './Menu'
 import Header from './Header'
 import Dashboard from './Dashboard'
+import CodeComplexity from './CodeComplexity'
 import ReadMe from './ReadMe'
 import Footer from './Footer'
+import ResearchPaper from './ResearchPaper'
 
 const StyledApp = styled.div`
   ${({MenuOpen}) => MenuOpen && `
@@ -28,6 +31,9 @@ const StyledApp = styled.div`
     }
 
     .route-footer {
+      margin: calc(2 * var(--margin));
+      margin-top: 50px;
+
       width: 100%;
     }
   }
@@ -39,10 +45,14 @@ function App() {
   return (
     <StyledApp {...{MenuOpen}}>
       <Router>
-        <div className='header-menu'>
+        <motion.div className='header-menu'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
+        >
           <Header {...{MenuOpen, setMenuOpen}}/>
           <Menu {...{MenuOpen}}/>
-        </div>
+        </motion.div>
 
         <div className='route-footer'>
           <Switch>
@@ -53,8 +63,10 @@ function App() {
               <ReadMe/>
             </Route>
             <Route path='/code-complexity'>
+              <CodeComplexity/>
             </Route>
             <Route path='/research-paper'>
+              <ResearchPaper/>
             </Route>
             <Route path='/google-colab'>
             </Route>
