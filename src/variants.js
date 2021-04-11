@@ -1,7 +1,7 @@
 const stagger = {
   show: {
     transition: {
-      staggerChildren: .1,
+      staggerChildren: .075,
     }
   }
 }

@@ -9,7 +9,7 @@
 
 [Research Paper](https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf/)
 
-![Example screenshot](./example.png)
+![Example screenshot](./static/example.png)
 
 ## Table of contents
 * [Technologies](#technologies)

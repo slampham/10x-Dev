@@ -8,13 +8,8 @@ import { stagger } from '../variants'
 
 const StyledCodeComplexity = styled(motion.div)`
   display: grid;
-  gap: var(--margin);
+  gap: calc(1.5 * (var(--margin)));
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-  @media (min-width: 1000px) {
-    margin: calc(2 * var(--margin));
-    margin-top: 50px;
-  }
 `
 
 function CodeComplexity() {
