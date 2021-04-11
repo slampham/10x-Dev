@@ -14,8 +14,6 @@ const StyledDashboard = styled(motion.div)`
   grid-template-columns: 100%;
   grid-gap: 30px;
 
-  /* overflow: hidden;  //FIXME: not sure if needed */
-
   @media (min-width: 1000px) {
     margin: calc(3.5 * var(--margin)) calc(2 * var(--margin));
 

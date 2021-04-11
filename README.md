@@ -12,7 +12,6 @@
 ![Example screenshot](./example.png)
 
 ## Table of contents
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Code Examples](#code-examples)
 * [General info](#general-info)
@@ -22,7 +21,7 @@
 * **Frontend**: HTML, CSS, JavaScript, React, styled-components
 * **Backend**: Python, BigQuery, GitHub API
 
-## Code Examples
+## Analysis Metrics
 [GitHub Actions:](https://ghtorrent.org/relational.html)
 
 > commits, commit_comments, followers, following, issue_comments, issue_events, issues_reporters, issues_assignees, organization_members, project_members, projects, pull_request_comments, pull_request_history, watchers

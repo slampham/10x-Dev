@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Menu from './Menu'
 import Header from './Header'
 import Dashboard from './Dashboard'
+import CodeComplexity from './CodeComplexity'
 import ReadMe from './ReadMe'
 import Footer from './Footer'
 
@@ -53,6 +54,7 @@ function App() {
               <ReadMe/>
             </Route>
             <Route path='/code-complexity'>
+              <CodeComplexity/>
             </Route>
             <Route path='/research-paper'>
             </Route>

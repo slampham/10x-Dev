@@ -21,7 +21,7 @@ const StyledChartCard = styled(Card)`
   }
 `
 
-function ChartCard({title, factMetric, occurence, className}) {
+function ChartCard({title, factMetric='median', occurence, className}) {
   let chart;
 
   if ((occurence - 1) % 3 === 0) {
