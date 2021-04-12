@@ -64,23 +64,30 @@ const StyledMenu = styled.nav`
   }
 `
 
-function Menu({MenuOpen}) {
-  function MotionLi({children}) {
-    return <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: .1 }}>{children}</motion.li>
+function Menu({setHeaderTitle}) {
+  function MotionLink({external, to, children}) {
+    return (
+      <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: .1 }}>
+        { external ? 
+          <a target="_blank" href={to} onClick={() => setHeaderTitle(children)} className='link'><FaReact className='icon'/> <span>{children}</span></a> :
+          <Link to={to} onClick={() => setHeaderTitle(children)} className='link'><FaReact className='icon'/> <span>{children}</span></Link>
+        }
+      </motion.li>
+    )
   }
 
   return (
-    <StyledMenu {...{MenuOpen}} className='menu'>
+    <StyledMenu className='menu'>
       <h3 className='menu-title'><FaReact className='icon'/> <span>10X DEV</span></h3>
 
       <hr/>
 
       <ul>
-        <MotionLi><Link to='/' className='link'><FaReact className='icon'/> <span>DASHBOARD</span></Link></MotionLi>
-        <MotionLi><Link to='/readme' className='link'><FaReact className='icon'/> <span>README</span></Link></MotionLi>
-        <MotionLi><Link to='/code-complexity' className='link'><FaReact className='icon'/> <span>CODE COMPLEXITY</span></Link></MotionLi>
-        <MotionLi><Link to='/research-paper' className='link'><FaReact className='icon'/> <span>RESEARCH PAPER</span></Link></MotionLi>
-        <MotionLi><Link to='/google-colab' className='link'><FaReact className='icon'/> <span>GOOGLE COLAB</span></Link></MotionLi>
+        <MotionLink to='/'>README</MotionLink>
+        <MotionLink to='/github-facts'>GITHUB FACTS</MotionLink>
+        <MotionLink to='/code-complexity'>CODE COMPLEXITY</MotionLink>
+        <MotionLink to='/research-paper'>RESEARCH PAPER</MotionLink>
+        <MotionLink external to='https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU'>GOOGLE COLAB</MotionLink>
       </ul>
     </StyledMenu>
   )

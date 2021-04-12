@@ -15,16 +15,18 @@ function TableWithButtons({title, className}) {
 
   const Buttons = percentiles.map(item => <button 
                                             className={percentile === item ? 'active' : undefined} 
-                                            onClick={() => setPercentile(item)}>
+                                            onClick={() => setPercentile(item)}
+                                            key={item}
+                                            >
                                             {item}
                                           </button>)
 
-  const ths = sampledUsers[percentile][0].map(heading => <th>{heading}</th>)
+  const ths = sampledUsers[percentile][0].map(heading => <th key={heading}>{heading}</th>)
   const trs = [];
   for (const [r, row] of sampledUsers[percentile].entries()) {
     if (r !== 0) {
-      const tds = row.map(item => <td>{item}</td>)
-      trs.push(<tr>{tds}</tr>)
+      const tds = row.map((item, i) => <td key={i}>{item}</td>)
+      trs.push(<tr key={r}>{tds}</tr>)
     }
   }
 

@@ -24,17 +24,17 @@ function ChartCardButtons({className, factMetric, setFactMetric}) {
           <button 
             className={factMetric === 'median' ? 'active' : undefined} 
             onClick={() => setFactMetric('median')}>
-            Medians
+            Median
           </button>
           <button 
             className={factMetric === 'diff' ? 'active' : undefined} 
             onClick={() => setFactMetric('diff')}>
-            Percent Diff
+            Percent Change
           </button>
           <button 
             className={factMetric === 'count' ? 'active' : undefined}
             onClick={() => setFactMetric('count')}>
-            Counts
+            Count
           </button>
         </div>
       </div>

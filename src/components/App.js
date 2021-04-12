@@ -5,17 +5,20 @@ import { motion } from 'framer-motion'
 
 import Menu from './Menu'
 import Header from './Header'
-import Dashboard from './Dashboard'
+import GitHubFacts from './GitHubFacts'
 import CodeComplexity from './CodeComplexity'
 import ReadMe from './ReadMe'
 import Footer from './Footer'
 import ResearchPaper from './ResearchPaper'
+import Colab from './Colab'
 
 const StyledApp = styled.div`
   ${({MenuOpen}) => MenuOpen && `
     transform: translate(200px);
   `}
   transition: transform var(--trans-time) ease-in-out;
+
+  min-height: 100vh;
 
   @media (max-width: 999px) {
     padding: 0 var(--margin);
@@ -33,7 +36,7 @@ const StyledApp = styled.div`
     .route-footer {
       margin: calc(2 * var(--margin));
       margin-top: 50px;
-
+      
       width: 100%;
     }
   }
@@ -41,6 +44,7 @@ const StyledApp = styled.div`
 
 function App() {
   const [MenuOpen, setMenuOpen] = useState(false)
+  const [headerTitle, setHeaderTitle] = useState('README')
 
   return (
     <StyledApp {...{MenuOpen}}>
@@ -50,25 +54,23 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
         >
-          <Header {...{MenuOpen, setMenuOpen}}/>
-          <Menu {...{MenuOpen}}/>
+          <Header {...{MenuOpen, setMenuOpen, headerTitle}}/>
+          <Menu {...{setHeaderTitle}}/>
         </motion.div>
 
         <div className='route-footer'>
           <Switch>
             <Route exact path='/'>
-              <Dashboard {...{MenuOpen}}/>
-            </Route>
-            <Route path='/readme'>
               <ReadMe/>
+            </Route>
+            <Route path='/github-facts'>
+              <GitHubFacts/>
             </Route>
             <Route path='/code-complexity'>
               <CodeComplexity/>
             </Route>
             <Route path='/research-paper'>
               <ResearchPaper/>
-            </Route>
-            <Route path='/google-colab'>
             </Route>
           </Switch>
 

@@ -40,8 +40,8 @@ function Table({title, data, className}) {
   const trs = [];
   for (const [r, row] of data.entries()) {
     if (r !== 0) {
-      const tds = row.map(item => <td>{item}</td>)
-      trs.push(<tr>{tds}</tr>)
+      const tds = row.map((item, i) => <td key={i}>{item}</td>)
+      trs.push(<tr key={r}>{tds}</tr>)
     }
   }
 
