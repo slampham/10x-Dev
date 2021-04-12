@@ -33,11 +33,11 @@ const StyledHeader = styled.header`
   }
 `
 
-function Header({MenuOpen, setMenuOpen}) {
+function Header({MenuOpen, setMenuOpen, headerTitle}) {
   return (
     <StyledHeader>
       <MenuToggler {...{MenuOpen, setMenuOpen}} />
-      <h3>DASHBOARD</h3>
+      <h3>{headerTitle}</h3>
     </StyledHeader>
   )
 }
