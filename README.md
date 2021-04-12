@@ -13,7 +13,7 @@
 
 ## Table of contents
 * [Technologies](#technologies)
-* [Code Examples](#code-examples)
+* [Analysis Metrics](#code-examples)
 * [General info](#general-info)
 * [Contact](#contact)
 

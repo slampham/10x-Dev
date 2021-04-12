@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useLocation } from 'react-router-dom'
 import MenuToggler, { StyledButton } from './MenuToggler.js'
 
 const StyledHeader = styled.header`
@@ -33,11 +34,13 @@ const StyledHeader = styled.header`
   }
 `
 
-function Header({MenuOpen, setMenuOpen, headerTitle}) {
+function Header({MenuOpen, setMenuOpen}) {
+  const { pathname } = useLocation()
+
   return (
     <StyledHeader>
       <MenuToggler {...{MenuOpen, setMenuOpen}} />
-      <h3>{headerTitle}</h3>
+      <h3>{pathname.slice(1)}</h3>
     </StyledHeader>
   )
 }

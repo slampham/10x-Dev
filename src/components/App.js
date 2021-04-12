@@ -44,7 +44,6 @@ const StyledApp = styled.div`
 
 function App() {
   const [MenuOpen, setMenuOpen] = useState(false)
-  const [headerTitle, setHeaderTitle] = useState('README')
 
   return (
     <StyledApp {...{MenuOpen}}>
@@ -54,8 +53,8 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
         >
-          <Header {...{MenuOpen, setMenuOpen, headerTitle}}/>
-          <Menu {...{setHeaderTitle}}/>
+          <Header {...{MenuOpen, setMenuOpen}}/>
+          <Menu />
         </motion.div>
 
         <div className='route-footer'>

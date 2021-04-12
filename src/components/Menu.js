@@ -64,13 +64,13 @@ const StyledMenu = styled.nav`
   }
 `
 
-function Menu({setHeaderTitle}) {
+function Menu() {
   function MotionLink({external, to, children}) {
     return (
       <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: .1 }}>
         { external ? 
-          <a target="_blank" href={to} onClick={() => setHeaderTitle(children)} className='link'><FaReact className='icon'/> <span>{children}</span></a> :
-          <Link to={to} onClick={() => setHeaderTitle(children)} className='link'><FaReact className='icon'/> <span>{children}</span></Link>
+          <a target="_blank" href={to} className='link'><FaReact className='icon'/> <span>{children}</span></a> :
+          <Link to={to} className='link'><FaReact className='icon'/> <span>{children}</span></Link>
         }
       </motion.li>
     )
