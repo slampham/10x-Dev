@@ -1,4 +1,4 @@
-# 10x Developer
+# [10x Developer](https://main.d308yhozibp3gs.amplifyapp.com/)
 > Analyze the differences between highly starred developers and normal developers through the number of actions they take on GitHub (such as commit amount or projects owned). Also examine the code of top developers (such as the number of comments they make or total lines of code). 
 
 ![Example screenshot](./src/static/sample.png)
