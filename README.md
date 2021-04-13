@@ -1,15 +1,7 @@
 # 10x Developer
 > Analyze the differences between highly starred developers and normal developers through the number of actions they take on GitHub (such as commit amount or projects owned). Also examine the code of top developers (such as the number of comments they make or total lines of code). 
 
-## Links
-
-[Project Website](https://www.spencerpham.dev/)
-
-[Google Colab](https://colab.research.google.com/drive/1c6-tahKwTqxG8aOacnQ9Y-Bd8VHUrYYU?usp=sharing#scrollTo=1vQ5t2NvXspL)
-
-[Research Paper](https://github.com/slampham/10x-Dev/blob/main/Final_Report.pdf/)
-
-![Example screenshot](./src/static/example.png)
+![Example screenshot](./src/static/sample.png)
 
 ## Table of contents
 * [Technologies](#technologies)
