@@ -46,8 +46,4 @@ const slowUp = {
   }
 }
 
-function copy(obj) { //TODO: delete me if not used
-  return JSON.parse(JSON.stringify(obj))
-}
-
-export { stagger, down, up, slowUp, copy }
+export { stagger, down, up, slowUp }

@@ -25,15 +25,15 @@ function ChartCard({title, factMetric='median', occurence, className}) {
   let chart;
 
   if ((occurence - 1) % 3 === 0) {
-    const { data, options } = blueChart(title, factMetric)
+    let { data, options } = blueChart(title, factMetric)
     chart = <Line {...{data, options}} />
   }
   else if ((occurence - 1) % 3 === 1) {
-    const { data, options } = pinkChart(title, factMetric)
+    let { data, options } = pinkChart(title, factMetric)
     chart = <Bar {...{data, options}} />
   }
   else {
-    const { data, options } = greenChart(title, factMetric)
+    let { data, options } = greenChart(title, factMetric)
     chart = <Line {...{data, options}} />
   }
 

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Line } from 'react-chartjs-2'
 
 import { StyledChartCard } from './ChartCard'
-import { blueChart } from './charts.js';
+import { logChart } from './charts.js';
 
 const StyledLargeCard = styled(StyledChartCard)`
   .title-buttons {
@@ -14,7 +14,7 @@ const StyledLargeCard = styled(StyledChartCard)`
 `
 
 function ChartCardButtons({className, factMetric, setFactMetric}) {
-  const { data, options } = blueChart('medianStarCounts')
+  const { data, options } = logChart()
 
   return (
     <StyledLargeCard {...{className}} >

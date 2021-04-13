@@ -1,6 +1,6 @@
 import { percentiles, medianStarCounts, facts } from './data'
 
-function logChart(title, factMetric) {
+function logChart() {
   return {
     data: (canvas) => {
       let ctx = canvas.getContext("2d");
@@ -28,7 +28,7 @@ function logChart(title, factMetric) {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]), //FIXME: idk why we have to make copy of data. Maybe bc how chart.js manipulates data
+            data: Object.values(medianStarCounts),
           },
         ],
       };
@@ -60,6 +60,12 @@ function logChart(title, factMetric) {
           ticks: {
             padding: 20,
             fontColor: "#9a9a9a",
+            callback: value => value.toLocaleString()
+          },
+          afterBuildTicks: chart => {
+            const ticks = [1, 10, 100, 1000, 10000, 100000, 1000000];
+            chart.ticks.splice(0, chart.ticks.length);
+            chart.ticks.push(...ticks);
           },
           type: 'logarithmic',
         },
@@ -111,7 +117,7 @@ function blueChart(title, factMetric) {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]), //FIXME: idk why we have to make copy of data. Maybe bc how chart.js manipulates data
+            data: copy(facts[factMetric][title]), //FIXME: idk why we have to make copy of data. Maybe bc how chart.js manipulates data
           },
         ],
       };
@@ -187,7 +193,7 @@ function pinkChart(title, factMetric) {
             borderWidth: 2,
             borderDash: [],
             borderDashOffset: 0.0,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]),
+            data: copy(facts[factMetric][title]),
           },
         ],
       };
@@ -268,7 +274,7 @@ function greenChart(title, factMetric) {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: title === 'medianStarCounts' ? Object.values(medianStarCounts) : copy(facts[factMetric][title]),
+            data: copy(facts[factMetric][title]),
           },
         ],
       };

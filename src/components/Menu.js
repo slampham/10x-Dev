@@ -69,7 +69,7 @@ function Menu() {
     return (
       <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: .1 }}>
         { external ? 
-          <a target="_blank" href={to} className='link'><FaReact className='icon'/> <span>{children}</span></a> :
+          <a href={to} className='link'><FaReact className='icon' target="_blank" rel="noreferrer"/> <span>{children}</span></a> :
           <Link to={to} className='link'><FaReact className='icon'/> <span>{children}</span></Link>
         }
       </motion.li>

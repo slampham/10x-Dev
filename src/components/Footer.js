@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
 function Footer() {
   return (
     <StyledFooter>
-      <div><a href='/'>SPENCER PHAM</a><a href='/'>GITHUB</a></div>
+      <div><a href='https://spencerpham.dev/' target="_blank" rel="noreferrer">SPENCER PHAM</a><a href='https://github.com/slampham' target="_blank" rel="noreferrer">GITHUB</a></div>
     </StyledFooter>
   )
 }
