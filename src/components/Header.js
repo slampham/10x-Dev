@@ -29,9 +29,6 @@ const StyledHeader = styled.header`
     right: 0;
     top: 0;
   }
-
-  @media (min-width: 1000px) {
-  }
 `
 
 function Header({MenuOpen, setMenuOpen}) {

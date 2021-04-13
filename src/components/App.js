@@ -10,7 +10,6 @@ import CodeComplexity from './CodeComplexity'
 import ReadMe from './ReadMe'
 import Footer from './Footer'
 import ResearchPaper from './ResearchPaper'
-import Colab from './Colab'
 
 const StyledApp = styled.div`
   ${({MenuOpen}) => MenuOpen && `

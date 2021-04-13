@@ -12,26 +12,25 @@ import { stagger } from '../variants'
 const StyledGitHubFacts = styled(motion.div)`
   display: grid;
   grid-template-columns: 100%;
+  grid-auto-rows: 300px;
   grid-gap: 30px;
 
   @media (min-width: 1000px) {
-
-    grid-template: repeat(7, 300px) / repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     .chard-card-buttons {
-      grid-area: 1 / 1 / 2 / -1;
+      grid-column: 1 / -1;
     }
 
     .table1 {
-      grid-area: -2 / 1 / -1 / 4;
+      grid-column: span 2;
     }
 
     .table2 {
-      grid-area: -2 / 4 / -1 / -1;
+      grid-column: span 2;
     }
 
     ${StyledChartCard}:not(.chard-card-buttons) {
-      grid-column: span 2;
     }
   }
 `
