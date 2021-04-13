@@ -12,7 +12,7 @@ function ResearchPaper() {
   return (
     <StyledResearchPaper data={PDF} type="application/pdf" >
       <p>Oops! Your browser doesn't support PDFs!</p>
-      <a href={PDF}><p>Download Instead</p></a>
+      <a href={PDF} target="_blank" rel="noreferrer"><p>Download Instead</p></a>
     </StyledResearchPaper>
   )
 }
