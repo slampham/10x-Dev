@@ -3,6 +3,9 @@
 
 [![Example screenshot](./src/static/sample.png)](https://main.d308yhozibp3gs.amplifyapp.com/)
 
+> [!NOTE]
+> I realized there's a lot of issues with this project. It does a lot of [correlation = causation](https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation), which I hope many of you understand can be misleading. Nonetheless, I still think this project has a lot of interesting analysis, which is why I'm leaving it up. So go ahead at your discretion =]
+
 ## Table of contents
 * [Technologies](#technologies)
 * [Analysis Metrics](#code-examples)
